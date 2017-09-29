@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 
 import { HomePage } from '../home/home';
@@ -18,7 +19,15 @@ import { SignupPage } from '../signup/signup';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  }
+
+  help() {
+    let alert = this.alertCtrl.create({
+      subTitle: 'Comming Soon!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {
